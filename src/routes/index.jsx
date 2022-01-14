@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
-import ErrorBoundary from "./components/ErrorBoundary"
-import NotFound from "./components/404";
-import Layout from "./components/layout"
-import Home from "./pages/home"
-import routerArray from "./routes"
+import ErrorBoundary from "../components/ErrorBoundary"
+import NotFound from "../components/404";
+import Layout from "../components/layout"
+import Home from "../pages/home"
+import routerArray from "./components"
 
 function App() {
   return (
