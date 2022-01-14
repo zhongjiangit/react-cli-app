@@ -15,9 +15,6 @@ const Home = (props) => {
         <br />
         <Link to="/layout/ref">Ref</Link>
       </nav>
-      <section>
-        {props.children}
-      </section>
     </>
   )
 }

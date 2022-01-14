@@ -22,7 +22,7 @@ const initialState = {
 }
 
 // 不要在循环，条件或嵌套函数中调用 Hook， 确保总是在你的 React 函数的最顶层以及任何 return 之前调用他们。
-export const Hooks = () => {
+const Hooks = () => {
 const [state, dispatch] = useReducer(reducer, initialState);
 const [loading, account] = useAccount(3000)
 
@@ -39,3 +39,5 @@ const [loading, account] = useAccount(3000)
     </AppContext.Provider>
   )
 }
+
+export default Hooks

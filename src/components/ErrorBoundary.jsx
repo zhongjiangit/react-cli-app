@@ -1,5 +1,4 @@
 import React from 'react'
-import NotFound from "./404";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,7 +23,6 @@ class ErrorBoundary extends React.Component {
       return (
         <>
           <h1>Something went wrong.</h1>
-          <NotFound />
         </>
       );
     }
