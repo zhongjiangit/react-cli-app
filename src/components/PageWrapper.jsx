@@ -6,7 +6,7 @@ const PageWrapper = (Component, props) => {
       <Suspense
         fallback={
           <div>
-            <Loading />
+            <Loading tip="Loading..." />
           </div>
         }
       >
