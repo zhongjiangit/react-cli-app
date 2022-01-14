@@ -1,5 +1,5 @@
 import React from 'react'
-import loading from '../common/imgs/loading.svg'
+import loading from '../common/svg/loading.svg'
 import styles from '../styles/index.module.scss'
 
 const Loading = (props) => {
