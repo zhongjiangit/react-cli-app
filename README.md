@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+## 可用脚本
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+在项目目录中，您可以运行：
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+以开发模式运行应用程序\
+打开[http://localhost:3000](http://localhost:3000)在浏览器中查看。
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+当您进行更改时，页面将重新加载\
+您还可以在控制台中看到任何lint错误。
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+将用于生产的应用程序生成到`build`文件夹\
+它在生产模式下正确地运行，并优化构建以获得最佳性能。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
+请参阅关于[部署]的部分(https://facebook.github.io/create-react-app/docs/deployment)了解更多信息。
 ### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+本节已移至此处：[https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### 目录说明
+```
+react-cli-app
+├─src
+|  ├─common           // 项目材料
+|  ├─components       // 页面公共组件
+|  ├─hooks            // 页面公共hooks
+|  ├─pages            // 页面相关代码
+|  ├─routes           // 路由
+|  ├─styles           // 公共样式
+|  ├─test             // 测试方法
+|  ├─utils            // 工具类
+```
+
+### 工具库使用
+
+1、请求库使用 [fly.js](https://github.com/wendux/fly)，useRequest使用参考[ahooks](https://ahooks.js.org/zh-CN/hooks/async/)
+
+```
+import fly from '@/common/service' 
+import { useRequest } from '@/common/hooks'  // fly的hook实现 
+```
+
+2、日期格式处理使用 [dayjs](https://github.com/iamkun/dayjs)
+
+3、常用 hooks 集合 [ahooks](https://ahooks.js.org/zh-CN/hooks/async)
+
+
+### git提交规范
+
+格式： type(scope?):`空格`subject
+
+type说明：
+
+1. build：主要目的是修改项目构建系统(例如 glup，webpack，rollup 的配置等)的提交
+2. ci：主要目的是修改项目继续集成流程(例如 Travis，Jenkins，GitLab CI，Circle等)的提交
+3. docs：文档更新
+4. feat：新增功能
+5. merge：分支合并 Merge branch ? of ?
+6. fix：bug 修复
+7. perf：性能, 体验优化fix
+8. refactor：重构代码(既没有新增功能，也没有修复 bug)
+9. style：不影响程序逻辑的代码修改(修改空白字符，格式缩进，补全缺失的分号等，没有改变代码逻辑)
+10. test：新增测试用例或是更新现有测试
+11. revert：回滚某个更早之前的提交
+12. chore：不属于以上类型的其他类型
