@@ -1,6 +1,6 @@
 import React from 'react'
 import PageWrapper from "../components/PageWrapper";
-import { testFunction } from '../test'
+import { testFunction } from '../e2e'
 
 const routeComponents = {
     StatePromotion: React.lazy(() =>

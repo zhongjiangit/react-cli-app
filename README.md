@@ -66,3 +66,19 @@ type说明：
 10. test：新增测试用例或是更新现有测试
 11. revert：回滚某个更早之前的提交
 12. chore：不属于以上类型的其他类型
+
+
+### 环境说明
+开发环境 APP_DEV_URL_API
+线上环境 APP_PROD_URL_API
+index.html 中使用%APP_PROD_URL_API%
+js/jsx 中：process.env.APP_PROD_URL_API
+
+proxy
+开发环境下跨域问题，前端一般是给本地的 devServer 设置代理
+
+---------------------------temp---------------------------------
+"start": "dotenv -e .env.dev react-app-rewired start",
+"build:prod": "dotenv -e .env.prod react-app-rewired build",
+"test": "react-app-rewired test",
+"eject": "react-scripts eject"
